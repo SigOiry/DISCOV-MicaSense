@@ -1,0 +1,94 @@
+---
+title: "Untitled"
+format: html
+---
+
+# Updating Training data
+
+## Requierement
+
+- An orthoimage from the Micasense RedEdge Dual MX multispectral camera, coded as a 16-bit integer (values ranging from 0 to 10000)
+- A shapefile of the new training data, containing at least one column named "True_Class", which holds the name of the class of the polygon.
+
+```{r}
+
+old_data <- read.delim("Data/Training/DISCOV_Invasea_V2.csv", sep=";")
+
+output_name <- "Data/Training/DISCOV_Invasea_V3.csv"
+
+table(old_data$True_Class)
+```
+
+
+```{r}
+library(tidyverse)
+library(terra)
+library(sf)
+
+rast <- rast("Data/img/Belon_1004_MS.tif") 
+
+shp <- read_sf("Data/shp/Training_Belon_1004/Training_Belon_1004_V2.shp")
+
+Class <-data.frame(True_Class = unique(shp$True_Class),
+                ID= c(1:length( unique(shp$True_Class))))
+shp <- shp %>% 
+  left_join(Class, by= "True_Class") %>% 
+  vect()
+
+
+shp_rast <- rasterize(shp, rast, field = "ID") 
+
+stk <- rast(list(rast, shp_rast)) %>% 
+  as.data.frame() %>% 
+  dplyr::filter(!is.na(ID)) %>% 
+  left_join(Class, by = "ID") %>% 
+  mutate(ID = c(1:nrow(.))) %>% 
+  set_names(c('Reflectance_444',
+              'Reflectance_475',
+              'Reflectance_531',
+              'Reflectance_560',
+              'Reflectance_650',
+              'Reflectance_668',
+              'Reflectance_705',
+              'Reflectance_717',
+              'Reflectance_740',
+              'Reflectance_842',
+              "ID",
+              "True_Class"))
+
+std <- stk %>%
+  pivot_longer(-c(True_Class,ID), names_to = "Band", values_to = "Ref") %>% 
+  group_by(ID) %>% 
+  reframe(STD = (Ref-min(Ref))/(max(Ref)-min(Ref)),
+          Band = Band) %>%
+  pivot_wider(names_from = Band,
+              values_from = STD)  %>% 
+  set_names(c('ID',
+              'Reflectance_Stan_444',
+                'Reflectance_Stan_475',
+                'Reflectance_Stan_531',
+                'Reflectance_Stan_560',
+                'Reflectance_Stan_650',
+                'Reflectance_Stan_668',
+                'Reflectance_Stan_705',
+                'Reflectance_Stan_717',
+                'Reflectance_Stan_740',
+                'Reflectance_Stan_842'))
+  
+df <- stk %>% 
+  left_join(std, by = "ID") %>% 
+  select(-ID) %>% 
+  mutate(NDVI_Stan = (Reflectance_Stan_842-Reflectance_Stan_668)/(Reflectance_Stan_842+Reflectance_Stan_668),
+         NDVI = (Reflectance_842-Reflectance_668)/(Reflectance_842+Reflectance_668)) %>% 
+  relocate(True_Class) 
+    # sample_n(230000)
+
+  
+
+new_training_data <- rbind(df,old_data)
+
+utils::write.table(new_training_data, output_name, sep = ";", quote = FALSE, row.names = FALSE) 
+
+table(new_training_data$True_Class)
+
+```

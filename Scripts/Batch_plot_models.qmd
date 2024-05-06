@@ -1,0 +1,122 @@
+---
+title: "Batch_plot_Compare"
+format: html
+editor: source
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+library(terra)
+library(Utilities.Package)
+```
+
+
+
+# Which model do you want to compare ? 
+```{r User Input}
+
+models = c("DISCOV_BiCOME_reframed","DiSCOV_InvaSea_V3")
+```
+
+
+```{r image list}
+
+models = c(models, "img_name")
+
+df_pred <- list.files("Output/Pred/Batch/", pattern = ".tif", recursive = T, full.names = T) %>% 
+  as.data.frame() %>% 
+  rename(path = ".") %>% 
+  mutate(img_name = gsub(".*/","",path),
+         model = str_remove(path, img_name)  %>% gsub("Output/Pred/Batch/","",.)%>%  gsub("/","",.),
+         img_name = str_remove(img_name, model) %>% gsub(".tif","",.)) %>% 
+  dplyr::filter(!str_detect(img_name,"prob")) %>% 
+  pivot_wider(names_from = model, values_from = path) %>% 
+  dplyr::select(all_of(models))
+```
+
+```{r plotting}
+
+for(i in 1:nrow(df_pred)){
+  
+  print(paste0(i,"/",nrow(df_pred)))
+  
+  img1 <- rast( df_pred[i,1][[1]])
+  img2 <- rast(df_pred[i,2][[1]])
+  
+  values(img1)[values(img1) == 0] = NA
+  values(img1)[values(img1) > 8] = NA
+  img1 <- as.factor(img1)
+  NAflag(img1) <- 32767
+  names(img1) <- "layer"
+  
+  values(img2)[values(img2) == 0] = NA
+  values(img2)[values(img2) > 8] = NA
+  img2 <- as.factor(img2)
+  NAflag(img2) <- 32767
+  names(img2) <- "layer"
+  
+  plot1 <- ggplot()+
+    tidyterra::geom_spatraster(data = img1, 
+                               mapping = aes(fill = layer),
+                               maxcell = 500832*8)+
+    coord_sf(crs = 4326)+
+    scale_fill_manual(breaks = c(1,2,3,4,5,6,7,8),
+                    values=c("#DAA520", "#b3ff1a", "#389318","#873e23","#b3002d", "#70543e","white","#42c9bc"),
+                    na.value = NA,
+                    name = "",
+                    labels = c("Bacillariophyceae",
+                               "Chlorophyceae",
+                               "Magnoliopsida",
+                               "Phaeophyceae",
+                               "Rhodophyceae",
+                               "Sediment",
+                               "SunGlint",
+                               "Water"))+
+    ggtitle(names(df_pred)[1])+
+    theme_Bede_Map()+
+    theme(plot.title = element_text(size = 20, face = "bold"),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank())
+  
+  plot2 <- ggplot()+
+    tidyterra::geom_spatraster(data = img2, 
+                               mapping = aes(fill = layer),
+                               maxcell = 500832*8)+
+    coord_sf(crs = 4326)+
+    scale_fill_manual(breaks = c(1,2,3,4,5,6,7,8),
+                    values=c("#DAA520", "#b3ff1a", "#389318","#873e23","#b3002d", "#70543e","white","#42c9bc"),
+                    na.value = NA,
+                    name = "",
+                    labels = c("Bacillariophyceae",
+                               "Chlorophyceae",
+                               "Magnoliopsida",
+                               "Phaeophyceae",
+                               "Rhodophyceae",
+                               "Sediment",
+                               "SunGlint",
+                               "Water"))+
+    ggtitle(names(df_pred)[2])+
+    theme_Bede_Map()+
+    theme(plot.title = element_text(size = 20, face = "bold"),
+          axis.text.x = element_blank(),
+          axis.text.y = element_blank())
+    
+  
+    
+  plots <- plot1 + plot2 +
+  plot_layout(guides = 'collect')
+  
+  ggsave(paste0("Output/Plots/Batch/",df_pred$img_name[i],"_",names(df_pred)[1],"_vs_",names(df_pred)[2],".png"),plots, height = 5, width = 10, dpi = 300)
+
+    
+  
+  
+}
+
+
+
+```
+
+

@@ -1,0 +1,8 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+Data/img/**
+Data/np_arrays/**
+Output/Pred/**
+*.pyc
