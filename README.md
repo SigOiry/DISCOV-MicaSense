@@ -15,13 +15,14 @@ on [Terrestrial
 
 <div>
 
-<img src="Data/figs/Micasense_Dual_MX.png" style="float: left; width: 20%;" title="Micasense RedEdge-MX Dual">
-
+<img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
+<p>
 This work demonstrates the development and application of a Neural
 Network classification model trained on a Micasense RedEdge-MX Dual
 multispectral drone camera. This model is called **DISCOV**, which
 stands for **D**rone **I**ntertidal **S**ubstrats **C**lassification
 **O**f **V**egetation.
+</p>
 
 </div>
 
