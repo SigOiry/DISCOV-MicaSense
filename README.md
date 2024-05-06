@@ -13,9 +13,9 @@ on [Terrestrial
 (EO4DIVERSITY)](https://www.eo4diversity.info/), [Freshwater
 (BIOMONDO)](https://www.biomondo.info/) and Coastal ecosystems (BiCOME).
 
-<div style="img-align=left">
+<div>
 
-<img src="Data/figs/Micasense_Dual_MX.png" width="20%" title="Micasense RedEdge-MX Dual">
+<img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
 
 This work demonstrates the development and application of a Neural
 Network classification model trained on a Micasense RedEdge-MX Dual
