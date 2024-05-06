@@ -5,3 +5,4 @@
 Data/np_arrays/**
 Output/Pred/**
 *.pyc
+/.quarto/
