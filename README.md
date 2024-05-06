@@ -14,7 +14,7 @@ on [Terrestrial
 (BIOMONDO)](https://www.biomondo.info/) and Coastal ecosystems (BiCOME).
 
 ![Micasense RedEdge-MX
-Dual](Data/figs/Micasense_Dual_MX.png){fig-align=“left”, width=“20%”}
+Dual](Data/figs/Micasense_Dual_MX.png){align=“left”, width=“20%”}
 
 This work demonstrates the development and application of a Neural
 Network classification model trained on a Micasense RedEdge-MX Dual
