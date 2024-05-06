@@ -1,1 +1,4 @@
-# DISCOV-MicaSense
+# README
+Simon Oiry
+
+## COUCOU

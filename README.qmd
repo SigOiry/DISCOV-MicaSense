@@ -1,6 +1,15 @@
 ---
 title: "README"
 author: "Simon Oiry"
-format: html
+format: 
+   gfm:
+     html-math-method: 
+       method: webtex
+       url: https://latex.codecogs.com/png.image?%5Cbg_black&space;
+editor: source
+editor_options: 
+  chunk_output_type: console
 ---
 
+
+## COUCOU
