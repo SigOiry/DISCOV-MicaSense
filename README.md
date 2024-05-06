@@ -15,7 +15,7 @@ on [Terrestrial
 
 <div>
 
-<img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
+<img src="Data/figs/Micasense_Dual_MX.png" style="float: left; width: 20%;" title="Micasense RedEdge-MX Dual">
 
 This work demonstrates the development and application of a Neural
 Network classification model trained on a Micasense RedEdge-MX Dual
