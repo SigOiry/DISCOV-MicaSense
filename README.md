@@ -35,14 +35,19 @@ model.
 
 ## Input and Output of the model
 
+### Input
+
 DISCOV processes input from a multilayer TIFF file containing 10
 spectral bands. Band 1 corresponds to the 444 nm band of the Micasense
 RedEdge-MX Dual, and Band 10 corresponds to the one at 840 nm. The model
 has been trained using pixels processed into reflectance by [Agisoft
 Metashape V2.1.1](https://www.agisoft.com). The training pixels were
-encoded in 16-bit integers, with values ranging from 0 to 10,000. The
-version 1.0 of DISCOV gives has output a TIFF file with values ranging
-between 1 and 10:
+encoded in 16-bit integers, with values ranging from 0 to 10,000.
+
+### Output
+
+The version 1.0 of DISCOV gives has output a TIFF file with values
+ranging between 1 and 10:
 
 - **1 - Microphytobenthos**: Unicellular microalgae and/or Cyanobacteria
   that can colonize superficial sediments at low tide. They can form a
@@ -74,3 +79,48 @@ between 1 and 10:
   also performs well on sand. It can be mistaken for Microphytobenthos
   because sometimes the bare mud contains a small amount of
   chlorophyll-a, which absorbs light around 668 nm.
+
+- **7 - Sun Glint**: Depending on the solar angle at the time of the
+  flight, some pixels receive specular reflections directly from the
+  sun, leading to an overestimation of the pixel’s total reflectance and
+  distorting the spectral shape. This ‘sun glint’ class has been trained
+  to prevent pixels affected by glint from being incorrectly classified
+  as a type of vegetation. When there is residual water on the surface
+  of the sediment, the probability of encountering glinted pixels
+  increases.
+
+- **8 - Water**: When the water is shallow and has vegetation at the
+  bottom, the spectral signature of the vegetation is slightly altered,
+  especially in the infrared spectrum. This can lead to incorrect
+  classification of the pixel. This class was primarily established to
+  avoid such scenarios by ensuring that very shallow waters are
+  correctly classified as water. It is also effective for deep waters.
+
+- **9 - NA**
+
+- **10 - NA**
+
+## How to use DISCOV 1.0 on your data ?
+
+The current repositories of DISCOV include Python code, used to train
+the model and make predictions on images, as well as R code used to
+update the training dataset with your own data and to plot the results
+of the predictions.
+
+### Windows
+
+The first step is to install all the necessary software, if you haven’t
+done so already. You will need to have R and Conda installed on your
+computer. For [Conda](https://docs.conda.io/en/latest/), I recommend
+installing it directly through
+[Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file)
+using the Windows installer, which can be downloaded
+[here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe).
+R can be downloaded from this
+[link](https://cran.r-project.org/mirrors.html). I recommend using
+[RStudio](https://posit.co/download/rstudio-desktop/), an integrated
+development environment specifically designed for R.
+
+Alternativelty to Rstudio, you can used software like [VS
+code](https://code.visualstudio.com) that will allow you to edit and
+play with code written in R and python in the same working environment.
