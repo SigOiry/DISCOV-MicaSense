@@ -44,13 +44,14 @@ encoded in 16-bit integers, with values ranging from 0 to 10,000. The
 version 1.0 of DISCOV gives has output a TIFF file with values ranging
 between 1 and 10:
 
-- **1 - microphytobenthos**: Unicellular microalgae and/or Cyanobacteria
-  that can colonize superficial sediments at low tide. They can form a
-  biofilm covering several square kilometers. The primary class of
-  microalgae forming these biofilms is Bacillariophyceae, commonly known
-  as diatoms.
+![\huge\color{orange}{\textsf{\textbf{1 - Microphytobenthos}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Borange%7D%7B%5Ctextsf%7B%5Ctextbf%7B1%20-%20Microphytobenthos%7D%7D%7D "\huge\color{orange}{\textsf{\textbf{1 - Microphytobenthos}}}")
 
-![\textbf{\textcolor{lightgreen}{2 - Chlorophyceae}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Blightgreen%7D%7B2%20-%20Chlorophyceae%7D%7D "\textbf{\textcolor{lightgreen}{2 - Chlorophyceae}}")
+Unicellular microalgae and/or Cyanobacteria that can colonize
+superficial sediments at low tide. They can form a biofilm covering
+several square kilometers. The primary class of microalgae forming these
+biofilms is Bacillariophyceae, commonly known as diatoms.
+
+![\huge\color{lightgreen}{\textsf{\textbf{2 - Chlorophyceae}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Blightgreen%7D%7B%5Ctextsf%7B%5Ctextbf%7B2%20-%20Chlorophyceae%7D%7D%7D "\huge\color{lightgreen}{\textsf{\textbf{2 - Chlorophyceae}}}")
 
 Green algae from the genus *Ulva sp* stranded on the sediment. The model
 has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and
@@ -58,12 +59,12 @@ has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and
 behave when encountering other types of Chlorophyceae outside of the
 Ulvophyceae class, such as *Caulerpa sp.*).
 
-- ![\color{red}{\textsf{\textbf{3 - Magnoliopsida}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ccolor%7Bred%7D%7B%5Ctextsf%7B%5Ctextbf%7B3%20-%20Magnoliopsida%7D%7D%7D "\color{red}{\textsf{\textbf{3 - Magnoliopsida}}}"):
-  Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*).
-  The model has been trained exclusively on pixels from *Nanozostera
-  noltei* (syn. *Zostera noltei*).
+![\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Bgreen%7D%7B%5Ctextsf%7B%5Ctextbf%7B3%20-%20Magnoliopsida%7D%7D%7D "\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}")
 
-![\textbf{\textcolor{brown}{4 - Phaeophyceae}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Bbrown%7D%7B4%20-%20Phaeophyceae%7D%7D "\textbf{\textcolor{brown}{4 - Phaeophyceae}}")
+Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*).
+The model has been trained exclusively on pixels from *Nanozostera
+noltei* (syn. *Zostera noltei*).
 
+![\huge\color{brown}{\textsf{\textbf{4 - Phaeophyceae}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Bbrown%7D%7B%5Ctextsf%7B%5Ctextbf%7B4%20-%20Phaeophyceae%7D%7D%7D "\huge\color{brown}{\textsf{\textbf{4 - Phaeophyceae}}}")
 Brown macrolalgae, stranded on the sediment or oftenly attached to
 rocks. Mainly trained from pixels of the genus *Fusus sp.*
