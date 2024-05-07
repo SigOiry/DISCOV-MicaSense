@@ -36,7 +36,7 @@ DISCOV processes input from a multilayer TIFF file containing 10 spectral bands.
 $$\textbf{\textcolor{lightgreen}{2 - Chlorophyceae}}$$ Green algae from the genus *Ulva sp* stranded on the sediment. The model has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and *Ulva intestinalis* . Therefore, I am uncertain how the model will behave when encountering other types of Chlorophyceae outside of the Ulvophyceae class, such as  *Caulerpa sp.*). 
 
 
-- $\color{red}{\textsf{3 - Magnoliopsida}}$: Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*). The model has been trained exclusively on pixels from *Nanozostera noltei* (syn. *Zostera noltei*). 
+- $\color{red}{\textsf{\textbf{3 - Magnoliopsida}}}$: Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*). The model has been trained exclusively on pixels from *Nanozostera noltei* (syn. *Zostera noltei*). 
 
 $$\textbf{\textcolor{brown}{4 - Phaeophyceae}}$$ Brown macrolalgae, stranded on the sediment or oftenly attached to rocks. Mainly trained from pixels of the genus *Fusus sp.*
 

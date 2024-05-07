@@ -58,7 +58,7 @@ has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and
 behave when encountering other types of Chlorophyceae outside of the
 Ulvophyceae class, such as *Caulerpa sp.*).
 
-- ![\color{red}{\textsf{3 - Magnoliopsida}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ccolor%7Bred%7D%7B%5Ctextsf%7B3%20-%20Magnoliopsida%7D%7D "\color{red}{\textsf{3 - Magnoliopsida}}"):
+- ![\color{red}{\textsf{\textbf{3 - Magnoliopsida}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ccolor%7Bred%7D%7B%5Ctextsf%7B%5Ctextbf%7B3%20-%20Magnoliopsida%7D%7D%7D "\color{red}{\textsf{\textbf{3 - Magnoliopsida}}}"):
   Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*).
   The model has been trained exclusively on pixels from *Nanozostera
   noltei* (syn. *Zostera noltei*).
