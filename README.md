@@ -44,7 +44,7 @@ encoded in 16-bit integers, with values ranging from 0 to 10,000. The
 version 1.0 of DISCOV gives has output a TIFF file with values ranging
 between 1 and 10:
 
-![\huge\color{orange}{\textsf{\textbf{1 - Microphytobenthos}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Borange%7D%7B%5Ctextsf%7B%5Ctextbf%7B1%20-%20Microphytobenthos%7D%7D%7D "\huge\color{orange}{\textsf{\textbf{1 - Microphytobenthos}}}")
+![\huge\color{orange}{\colorbox{Transparent}{\textsf{\textbf{1 - Microphytobenthos}}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Borange%7D%7B%5Ccolorbox%7BTransparent%7D%7B%5Ctextsf%7B%5Ctextbf%7B1%20-%20Microphytobenthos%7D%7D%7D%7D "\huge\color{orange}{\colorbox{Transparent}{\textsf{\textbf{1 - Microphytobenthos}}}}")
 
 Unicellular microalgae and/or Cyanobacteria that can colonize
 superficial sediments at low tide. They can form a biofilm covering
