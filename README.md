@@ -44,12 +44,11 @@ encoded in 16-bit integers, with values ranging from 0 to 10,000. The
 version 1.0 of DISCOV gives has output a TIFF file with values ranging
 between 1 and 10:
 
-![\textbf{\textcolor{orange}{1 - microphytobenthos}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Borange%7D%7B1%20-%20microphytobenthos%7D%7D "\textbf{\textcolor{orange}{1 - microphytobenthos}}")
-
-Unicellular microalgae and/or Cyanobacteria that can colonize
-superficial sediments at low tide. They can form a biofilm covering
-several square kilometers. The primary class of microalgae forming these
-biofilms is Bacillariophyceae, commonly known as diatoms.
+- **1 - microphytobenthos**: Unicellular microalgae and/or Cyanobacteria
+  that can colonize superficial sediments at low tide. They can form a
+  biofilm covering several square kilometers. The primary class of
+  microalgae forming these biofilms is Bacillariophyceae, commonly known
+  as diatoms.
 
 ![\textbf{\textcolor{lightgreen}{2 - Chlorophyceae}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Blightgreen%7D%7B2%20-%20Chlorophyceae%7D%7D "\textbf{\textcolor{lightgreen}{2 - Chlorophyceae}}")
 
@@ -59,11 +58,10 @@ has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and
 behave when encountering other types of Chlorophyceae outside of the
 Ulvophyceae class, such as *Caulerpa sp.*).
 
-![\textbf{\textcolor{green}{3 - Magnoliopsida}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Bgreen%7D%7B3%20-%20Magnoliopsida%7D%7D "\textbf{\textcolor{green}{3 - Magnoliopsida}}")
-
-Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*).
-The model has been trained exclusively on pixels from *Nanozostera
-noltei* (syn. *Zostera noltei*).
+- ![\color{red}{\textsf{3 - Magnoliopsida}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ccolor%7Bred%7D%7B%5Ctextsf%7B3%20-%20Magnoliopsida%7D%7D "\color{red}{\textsf{3 - Magnoliopsida}}"):
+  Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*).
+  The model has been trained exclusively on pixels from *Nanozostera
+  noltei* (syn. *Zostera noltei*).
 
 ![\textbf{\textcolor{brown}{4 - Phaeophyceae}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Ctextbf%7B%5Ctextcolor%7Bbrown%7D%7B4%20-%20Phaeophyceae%7D%7D "\textbf{\textcolor{brown}{4 - Phaeophyceae}}")
 
