@@ -1,5 +1,4 @@
-# DISCOV V1.0
-Simon Oiry
+
 
 # What is DISCOV ?
 
@@ -51,12 +50,12 @@ between 1 and 10:
   primary class of microalgae forming these biofilms is
   Bacillariophyceae, commonly known as diatoms.
 
-- 2 - **Chlorophyceae** : Green algae from the genus *Ulva sp* stranded
-  on the sediment. The model has primarily been trained on *Ulva
-  lactuca*, *Ulva armoricana*, and *Ulva intestinalis* . Therefore, I am
-  uncertain how the model will behave when encountering other types of
-  Chlorophyceae outside of the Ulvophyceae class, such as *Caulerpa
-  sp.*).
+- 2 - <span style="color:green;">**Chlorophyceae**</span> : Green algae
+  from the genus *Ulva sp* stranded on the sediment. The model has
+  primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and *Ulva
+  intestinalis* . Therefore, I am uncertain how the model will behave
+  when encountering other types of Chlorophyceae outside of the
+  Ulvophyceae class, such as *Caulerpa sp.*).
 
 - 3 - **Magnoliopsida**: Marine angiosperm of the genus *Nanozostera
   sp.* (syn. *Zostera sp.*). The model has been trained exclusively on
