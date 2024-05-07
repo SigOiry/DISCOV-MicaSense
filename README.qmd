@@ -43,7 +43,7 @@ $$\huge\color{green}{\colorbox{white}{\textsf{\textbf{3 - Magnoliopsida}}}}$$
 
 Marine angiosperm of the genus *Nanozostera sp.* (syn. *Zostera sp.*). The model has been trained exclusively on pixels from *Nanozostera noltei* (syn. *Zostera noltei*). 
 
-$$\huge\color{brown}{\colorbox{white}{\textsf{\textbf{4 - Phaeophyceae}}}}$$ 
+$$\huge\color{brown}{\colorbox{white}{\textsf{\textbf{4 - Phaeophyceae}}}}$$
 
 Brown macrolalgae, stranded on the sediment or oftenly attached to rocks. Mainly trained from pixels of the genus *Fusus sp.*
 
