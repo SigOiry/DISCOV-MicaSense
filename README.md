@@ -121,6 +121,24 @@ R can be downloaded from this
 [RStudio](https://posit.co/download/rstudio-desktop/), an integrated
 development environment specifically designed for R.
 
-Alternativelty to Rstudio, you can used software like [VS
-code](https://code.visualstudio.com) that will allow you to edit and
-play with code written in R and python in the same working environment.
+Alternatively to RStudio, you can use software like [VS
+code](https://code.visualstudio.com) which allows you to edit and run
+code written in both R and Python within the same working environment.
+
+Once Conda is installed, open the terminal (Press windows + R and enter
+“cmd” to open the terminal). Typing `where conda` should give a reply.
+If at this step you have an error, check your conda installation.
+
+Now you can clone the repositories using [this
+link](https://github.com/SigOiry/DISCOV-MicaSense/archive/refs/heads/main.zip).
+Save and extract it to a safe location. Once that is done, you can open
+the terminal in the folder by pressing the Ctrl key on your keyboard and
+right-clicking in the folder, then select ‘Open terminal’.
+
+If you encounter an error during the installation of pip dependencies,
+make sure you have [enabled long path support in
+Windows](https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry#enable-long-paths-in-windows-10-version-1607-and-later).
+
+Once that’s done, you should be ready to work with the model. You can
+activate the environment by typing `conda activate NN_env` in the
+terminal, or by selecting the NN_env kernel in Visual Studio Code.
