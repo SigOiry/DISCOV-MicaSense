@@ -44,14 +44,14 @@ encoded in 16-bit integers, with values ranging from 0 to 10,000. The
 version 1.0 of DISCOV gives has output a TIFF file with values ranging
 between 1 and 10:
 
-![\huge\color{orange}{\colorbox{Transparent}{\textsf{\textbf{1 - Microphytobenthos}}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Borange%7D%7B%5Ccolorbox%7BTransparent%7D%7B%5Ctextsf%7B%5Ctextbf%7B1%20-%20Microphytobenthos%7D%7D%7D%7D "\huge\color{orange}{\colorbox{Transparent}{\textsf{\textbf{1 - Microphytobenthos}}}}")
+![\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Bgreen%7D%7B%5Ctextsf%7B%5Ctextbf%7B3%20-%20Magnoliopsida%7D%7D%7D "\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}")
 
 Unicellular microalgae and/or Cyanobacteria that can colonize
 superficial sediments at low tide. They can form a biofilm covering
 several square kilometers. The primary class of microalgae forming these
 biofilms is Bacillariophyceae, commonly known as diatoms.
 
-![\huge\color{lightgreen}{\textsf{\textbf{2 - Chlorophyceae}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Blightgreen%7D%7B%5Ctextsf%7B%5Ctextbf%7B2%20-%20Chlorophyceae%7D%7D%7D "\huge\color{lightgreen}{\textsf{\textbf{2 - Chlorophyceae}}}")
+![\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}](https://latex.codecogs.com/png.image?%5Cbg_black&space;%5Chuge%5Ccolor%7Bgreen%7D%7B%5Ctextsf%7B%5Ctextbf%7B3%20-%20Magnoliopsida%7D%7D%7D "\huge\color{green}{\textsf{\textbf{3 - Magnoliopsida}}}")
 
 Green algae from the genus *Ulva sp* stranded on the sediment. The model
 has primarily been trained on *Ulva lactuca*, *Ulva armoricana*, and
