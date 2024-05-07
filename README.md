@@ -153,11 +153,11 @@ installing it directly through
 [Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file)
 using the MacOSX installer, which can be downloaded
 [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh).
-to run this script, go to your download folder in Finders, and while
-holding controls, right clicks on the Download folder in the path bar at
-the bottom of the windows. Select “Open in Terminal”, run
-`sh Miniforge3-MacOSX-86_64.sh` and follow the instruction. When it’s
-done run `conda init` and close the Terminal.
+To run this script, navigate to your Downloads folder in Finder. While
+holding the ‘control’ key, right-click on the ‘Downloads’ folder in the
+path bar at the bottom of the window. Select ‘Open in Terminal’. Then,
+`run sh Miniforge3-MacOSX-x86_64.sh` and follow the instructions. Once
+it’s complete, execute `conda init` and close the Terminal.
 
 R can be downloaded from this
 [link](https://cran.r-project.org/mirrors.html). I recommend using
@@ -167,10 +167,10 @@ RStudio, you can use software like [VS
 code](https://code.visualstudio.com) which allows you to edit and run
 code written in both R and Python within the same working environment.
 
-Once Conda is installed, open the terminal (Press Command + Space and
-enter “terminal” to open the terminal). Typing `where conda` should give
-a reply. If at this step you have “conda not dound”, check your conda
-installation.
+Once Conda is installed, open the terminal by pressing Command + Space
+and typing ‘terminal’. In the terminal, type `where conda` to check if
+it is installed correctly. If you receive a ‘conda not found’ message at
+this step, verify your Conda installation.
 
 Now you can clone the repositories using [this
 link](https://github.com/SigOiry/DISCOV-MicaSense/archive/refs/heads/main.zip).
