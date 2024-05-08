@@ -153,11 +153,11 @@ installing it directly through
 [Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file)
 using the MacOSX installer, which can be downloaded
 [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh).
-To run this script, navigate to your Downloads folder in Finder. While
-holding the ‘control’ key, right-click on the ‘Downloads’ folder in the
-path bar at the bottom of the window. Select ‘Open in Terminal’. Then,
-`run sh Miniforge3-MacOSX-x86_64.sh` and follow the instructions. Once
-it’s complete, execute `conda init` and close the Terminal.
+To run this script, open the terminal by pressing Command + Space and
+navigate to the Downloads folder using the `ls` and `cd` commands. Then,
+run `sh Miniforge3-MacOSX-x86_64.sh` and follow the instructions. Once
+it’s complete, press ‘yes’ or execute `conda init` and close the
+Terminal.
 
 R can be downloaded from this
 [link](https://cran.r-project.org/mirrors.html). I recommend using
@@ -175,10 +175,10 @@ this step, verify your Conda installation.
 Now you can clone the repositories using [this
 link](https://github.com/SigOiry/DISCOV-MicaSense/archive/refs/heads/main.zip).
 Save and extract it to a safe location. Once that is done, you can open
-the terminal in the folder by right clicks on the folder name while
-holding the control key. Select “Open in Terminal”. Entering
-`conda env create -f environment.yml` will install the correct version
-of Python and all the dependencies needed for DISCOV to run.
+the terminal and navigate to the DISCOV-MicaSense folder using the `ls`
+and `cd` commands. Entering `conda env create -f environment_MACOSX.yml`
+will install the correct version of Python and all the dependencies
+needed for DISCOV to run.
 
 Once that’s done, you should be ready to work with the model. You can
 activate the environment by typing `conda activate NN_env` in the
