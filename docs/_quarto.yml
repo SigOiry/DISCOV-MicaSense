@@ -4,11 +4,13 @@ project:
 website:
   title: "DISCOV"
   navbar:
+    tools:
+      - icon: github
+        href: https://github.com/SigOiry/DISCOV-MicaSense
     left:
       - href: index.qmd
         text: Home
       - about.qmd
-
 format:
   html:
     theme:
@@ -16,9 +18,11 @@ format:
       dark: darkly
     css: styles.css
     toc: true
+    grid:
+      body-width: 1000px
+      margin-width: 150px
+      sidebar-width: 150px
 
 editor: source
 
-body-header: | 
-  ![](/img/PortugalMeadow.png)
 
