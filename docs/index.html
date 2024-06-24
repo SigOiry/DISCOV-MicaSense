@@ -34,7 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -117,9 +116,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#discov" id="toc-discov" class="nav-link active" data-scroll-target="#discov">DISCOV</a>
-  <ul class="collapse">
-  <li><a href="#input-and-output-of-the-model" id="toc-input-and-output-of-the-model" class="nav-link" data-scroll-target="#input-and-output-of-the-model">Input and Output of the model</a>
+  <li><a href="#input-and-output-of-the-model" id="toc-input-and-output-of-the-model" class="nav-link active" data-scroll-target="#input-and-output-of-the-model">Input and Output of the model</a>
   <ul class="collapse">
   <li><a href="#input" id="toc-input" class="nav-link" data-scroll-target="#input">Input</a></li>
   <li><a href="#output" id="toc-output" class="nav-link" data-scroll-target="#output">Output</a></li>
@@ -128,7 +125,6 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
   <li><a href="#macos" id="toc-macos" class="nav-link" data-scroll-target="#macos">MACOS</a></li>
-  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -139,23 +135,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><img src=".\Data/img/PortugalMeadow_small.png" class="img-fluid"></p>
-<section id="discov" class="level1">
-<h1>DISCOV</h1>
+<div class="quarto-about-jolla">
+  <img src="Data/img/DISCOV_logo.png" class="about-image
+  rounded " style="width: 400px;">
+ <header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DISCOV</h1>
+</div>
+<div class="quarto-title-meta">
+  </div>
+</header><div id="hero-heading">
+<p>DISCOV is a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera. This model is called <strong>DISCOV</strong>, which stands for <strong>D</strong>rone <strong>I</strong>ntertidal <strong>S</strong>ubstrats <strong>C</strong>lassification <strong>O</strong>f <strong>V</strong>egetation.</p>
+</div> 
+  <hr class="about-sep">
+   <div class="about-links">
+  <a href="https://github.com/SigOiry/DISCOV-MicaSense" class="about-link" rel="" target="">
+    <i class="bi bi-github"></i>
+     <span class="about-link-text">Github</span>
+  </a>
+</div>
+</div>
+
 <p>This repository complements a scientific paper published by Oiry et al.&nbsp;in Remote Sensing of Environment (Under review).</p>
 <p>This paper has produced during Simon Oiry’s PhD and the <a href="https://bicome.info">BiCOME project</a>. The project is one of three studies that form part of the European Space Agency’s ‘Biodiversity+ Precursors’ on&nbsp;<a href="https://www.eo4diversity.info/">Terrestrial (EO4DIVERSITY)</a>,&nbsp;<a href="https://www.biomondo.info/">Freshwater (BIOMONDO)</a>&nbsp;and Coastal ecosystems (BiCOME).</p>
 <p><img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual"></p>
-<p>This work demonstrates the development and application of a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera. This model is called <strong>DISCOV</strong>, which stands for <strong>D</strong>rone <strong>I</strong>ntertidal <strong>S</strong>ubstrats <strong>C</strong>lassification <strong>O</strong>f <strong>V</strong>egetation.</p>
 <p><img src="Data/figs/Figure2.png" width="40%" align="right" title="Classes of the model"></p>
 <p>DISCOV is designed to classify soft bottom sediments, such as mudflats and sandflats, as well as the vegetation typically found in these habitats. The primary objective of this model is to accurately distinguish between seagrasses and green macroalgae. This distinction presents a significant challenge in remote sensing for accurately classifying coastal habitats, owing to the similar pigment compositions of these two types of vegetation. In the image on the right, you can see the spectral signature for each vegetation class identified by the model.</p>
 <section id="input-and-output-of-the-model" class="level2">
-<h2 class="anchored" data-anchor-id="input-and-output-of-the-model">Input and Output of the model</h2>
+<h2 data-anchor-id="input-and-output-of-the-model">Input and Output of the model</h2>
 <section id="input" class="level3">
-<h3 class="anchored" data-anchor-id="input">Input</h3>
+<h3 data-anchor-id="input">Input</h3>
 <p>DISCOV processes input from a multilayer TIFF file containing 10 spectral bands. Band 1 corresponds to the 444 nm band of the Micasense RedEdge-MX Dual, and Band 10 corresponds to the one at 840 nm. The model has been trained using pixels processed into reflectance by <a href="https://www.agisoft.com">Agisoft Metashape V2.1.1</a>. The training pixels were encoded in 16-bit integers, with values ranging from 0 to 10,000.</p>
 </section>
 <section id="output" class="level3">
-<h3 class="anchored" data-anchor-id="output">Output</h3>
+<h3 data-anchor-id="output">Output</h3>
 <p>The version 1.0 of DISCOV gives has output a TIFF file with values ranging between 1 and 10:</p>
 <ul>
 <li><p><strong>1 - Microphytobenthos</strong>: Unicellular microalgae and/or Cyanobacteria that can colonize superficial sediments at low tide. They can form a biofilm covering several square kilometers. The primary class of microalgae forming these biofilms is Bacillariophyceae, commonly known as diatoms.</p></li>
@@ -172,10 +185,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="how-to-use-discov-1.0-on-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use-discov-1.0-on-your-data">How to use DISCOV 1.0 on your data ?</h2>
+<h2 data-anchor-id="how-to-use-discov-1.0-on-your-data">How to use DISCOV 1.0 on your data ?</h2>
 <p>The current repositories of DISCOV include Python code, used to train the model and make predictions on images, as well as R code used to update the training dataset with your own data and to plot the results of the predictions.</p>
 <section id="windows" class="level3">
-<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<h3 data-anchor-id="windows">Windows</h3>
 <p>The first step is to install all the necessary software, if you haven’t done so already. You will need to have R and Conda installed on your computer. For <a href="https://docs.conda.io/en/latest/">Conda</a>, I recommend installing it directly through <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file">Conda-forge</a> using the Windows installer, which can be downloaded <a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe">here</a>. R can be downloaded from this <a href="https://cran.r-project.org/mirrors.html">link</a>. I recommend using <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>, an integrated development environment specifically designed for R.</p>
 <p>Alternatively to RStudio, you can use software like <a href="https://code.visualstudio.com">VS code</a> which allows you to edit and run code written in both R and Python within the same working environment. Once Conda is installed, open the terminal (Press windows + R and enter “cmd” to open the terminal). Typing <code>where conda</code> should give a reply. If at this step you have an error, check your conda installation.</p>
 <p>Now you can clone the repositories using <a href="https://github.com/SigOiry/DISCOV-MicaSense/archive/refs/heads/main.zip">this link</a>. Save and extract it to a safe location. Once that is done, you can open the terminal in the folder by pressing the Ctrl key on your keyboard and right-clicking in the folder, then select ‘Open terminal’. Entering <code>conda env create -f environment.yml</code> will install the correct version of Python and all the dependencies needed for DISCOV to run.</p>
@@ -183,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Once that’s done, you should be ready to work with the model. You can activate the environment by typing <code>conda activate NN_env</code> in the terminal, or by selecting the NN_env kernel in Visual Studio Code.</p>
 </section>
 <section id="macos" class="level3">
-<h3 class="anchored" data-anchor-id="macos">MACOS</h3>
+<h3 data-anchor-id="macos">MACOS</h3>
 <p>The first step is to install all the necessary software, if you haven’t done so already. You will need to have R and Conda installed on your mac. For <a href="https://docs.conda.io/en/latest/">Conda</a>, I recommend installing it directly through <a href="https://github.com/conda-forge/miniforge?tab=readme-ov-file">Conda-forge</a> using the MacOSX installer, which can be downloaded <a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh">here</a>. To run this script, open the terminal by pressing Command + Space and navigate to the Downloads folder using the <code>ls</code> and <code>cd</code> commands. Then, run <code>sh Miniforge3-MacOSX-x86_64.sh</code> and follow the instructions. Once it’s complete, press ‘yes’ or execute <code>conda init</code> and close the Terminal.</p>
 <p>R can be downloaded from this <a href="https://cran.r-project.org/mirrors.html">link</a>. I recommend using <a href="https://posit.co/download/rstudio-desktop/">RStudio</a>, an integrated development environment specifically designed for R. Alternatively to RStudio, you can use software like <a href="https://code.visualstudio.com">VS code</a> which allows you to edit and run code written in both R and Python within the same working environment.</p>
 <p>Once Conda is installed, open the terminal by pressing Command + Space and typing ‘terminal’. In the terminal, type <code>where conda</code> to check if it is installed correctly. If you receive a ‘conda not found’ message at this step, verify your Conda installation.</p>
@@ -191,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Once that’s done, you should be ready to work with the model. You can activate the environment by typing <code>conda activate NN_env</code> in the terminal, or by selecting the NN_env kernel in Visual Studio Code.</p>
 
 
-</section>
+
 </section>
 </section>
 
@@ -360,13 +373,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

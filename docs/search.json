@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DISCOV",
+    "section": "",
+    "text": "DISCOV is a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera. This model is called DISCOV, which stands for Drone Intertidal Substrats Classification Of Vegetation.\n \n  \n   \n  \n    \n     Github\nThis repository complements a scientific paper published by Oiry et al. in Remote Sensing of Environment (Under review).\nThis paper has produced during Simon Oiry’s PhD and the BiCOME project. The project is one of three studies that form part of the European Space Agency’s ‘Biodiversity+ Precursors’ on Terrestrial (EO4DIVERSITY), Freshwater (BIOMONDO) and Coastal ecosystems (BiCOME).\nDISCOV is designed to classify soft bottom sediments, such as mudflats and sandflats, as well as the vegetation typically found in these habitats. The primary objective of this model is to accurately distinguish between seagrasses and green macroalgae. This distinction presents a significant challenge in remote sensing for accurately classifying coastal habitats, owing to the similar pigment compositions of these two types of vegetation. In the image on the right, you can see the spectral signature for each vegetation class identified by the model."
+  },
+  {
     "objectID": "index.html#input-and-output-of-the-model",
     "href": "index.html#input-and-output-of-the-model",
     "title": "DISCOV",

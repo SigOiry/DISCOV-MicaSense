@@ -1,5 +1,8 @@
 project:
   type: website
+  render: 
+    - index.qmd
+    - about.qmd
   output-dir: "./docs"
 
 website:
@@ -24,6 +27,7 @@ format:
       body-width: 1000px
       margin-width: 150px
       sidebar-width: 150px
+      gutter-width: 0px
 
 editor: source
 

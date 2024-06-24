@@ -1,6 +1,22 @@
-![](/Data/img/PortugalMeadow_small.png)
+---
+title: DISCOV
+image: Data/img/DISCOV_logo.png
+about:
+  image-shape: rounded
+  image-width: 400px
+  id: hero-heading
+  template: jolla
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/SigOiry/DISCOV-MicaSense
+---
+:::{#hero-heading}
 
-# DISCOV 
+DISCOV is a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera. This model is called **DISCOV**, which stands for **D**rone **I**ntertidal **S**ubstrats **C**lassification **O**f **V**egetation.
+
+:::
+
 
 This repository complements a scientific paper published by Oiry et al. in Remote Sensing of Environment (Under review).
 
@@ -8,9 +24,6 @@ This paper has produced during Simon Oiry's PhD and the [BiCOME project](https:/
 
 
 <img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
-
-This work demonstrates the development and application of a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera. This model is called **DISCOV**, which stands for **D**rone **I**ntertidal **S**ubstrats **C**lassification **O**f **V**egetation.
-
 
 <img src="Data/figs/Figure2.png" width="40%" align="right"
 title="Classes of the model">
@@ -73,7 +86,3 @@ Once Conda is installed, open the terminal by pressing Command + Space and typin
 Now you can clone the repositories using [this link](https://github.com/SigOiry/DISCOV-MicaSense/archive/refs/heads/main.zip). Save and extract it to a safe location. Once that is done, you can open the terminal and navigate to the DISCOV-MicaSense folder using the `ls` and `cd` commands. Entering `conda env create -f environment_MACOSX.yml` will install the correct version of Python and all the dependencies needed for DISCOV to run.
 
 Once that’s done, you should be ready to work with the model. You can activate the environment by typing `conda activate NN_env` in the terminal, or by selecting the NN_env kernel in Visual Studio Code.
-
-
-
-
