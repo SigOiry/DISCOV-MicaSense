@@ -1,0 +1,38 @@
+project:
+  type: website
+  render: 
+    - index.qmd
+    - about.qmd
+    - DISCOV_Examples.qmd
+  output-dir: "../docs"
+
+website:
+  title: "DISCOV"
+  favicon: ./Imgs/DISCOV_logo.png
+  navbar:
+    tools:
+      - icon: github
+        href: https://github.com/SigOiry/DISCOV-MicaSense
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About me
+      - href: DISCOV_Examples.qmd
+        text: DISCOV Example
+format:
+  html:
+    theme:      
+      dark: darkly
+      light: flatly
+    css: styles.css
+    toc: true
+    grid:
+      body-width: 1000px
+      margin-width: 150px
+      sidebar-width: 150px
+      gutter-width: 0px
+
+editor: source
+
+

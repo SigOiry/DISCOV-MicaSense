@@ -1,0 +1,64 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r Pred_BelonV2}
+#| cache: true
+#| echo: false
+#| eval: false
+#| warning: false
+
+library(tidyverse)
+library(leaflet)
+library(sf)
+library(leafem)
+library(leaflet.extras2)
+library(terra)
+
+Gaf_RGB <- "./Data/RGB/Gaf_Low_RGB.tif" %>% 
+  raster::stack()
+# NAvalue(Belon_RGB) <- 0
+
+Gaf_Pred <- "Data/RGB/Gaf_Low_pred_RGB.tif" %>% 
+  raster::stack()
+
+plot <- leaflet() %>%   
+  # addTiles() %>% 
+  setView(lng = -8.743325,lat = 40.597520, zoom = 19) %>% 
+  addMapPane("right", zIndex = 0) %>%
+  addMapPane("left", zIndex = 0) %>%
+  addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
+    # addProviderTiles(providers$CartoDB, group="carto", layerId = "RGBid", options = pathOptions(pane = "left")) %>% 
+  # addProviderTiles(providers$CartoDB, group="carto", layerId = "DSMid", options = pathOptions(pane = "right")) %>% 
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "left")),
+                     layerId = "RGB"
+                     ) %>%
+  addProviderTiles(providers$OpenStreetMap,
+                     group = "Toner",
+                     options = c(providerTileOptions(minZoom = 8, maxZoom = 100),
+                                 pathOptions(pane = "right")),
+                     layerId = "DSM_pred") %>%
+  leafem::addRasterRGB(Gaf_RGB,
+                       r=1,
+                       g=2,
+                       b=3,
+                       options = pathOptions(pane = "left"),
+                       layerId = "RGB"
+                       ) %>%
+  leafem::addRasterRGB(Gaf_Pred,
+                       r=1,
+                       g=2,
+                       b=3,
+                       options = pathOptions(pane = "right"),
+                       layerId = "DSM_pred") %>%
+  leaflet.extras2::addSidebyside(leftId = "RGB",
+                                  rightId = "DSM_pred")
+
+htmlwidgets::saveWidget(plot, file="maps/map_pred_Gaf_Low_DISCOV.html")
+
+```
