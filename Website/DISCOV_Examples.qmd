@@ -2,6 +2,13 @@
 output: html_document
 editor_options: 
   chunk_output_type: console
+format:
+  html:
+    grid:
+      body-width: 1300px
+      margin-width: 0px
+      sidebar-width: 0px
+      gutter-width: 0px
 ---
 
 ```{r Pred_BelonV2}
@@ -17,16 +24,16 @@ library(leafem)
 library(leaflet.extras2)
 library(terra)
 
-Gaf_RGB <- "./Data/RGB/Gaf_Low_RGB.tif" %>% 
+Gaf_RGB <- "./Data/RGB/Gaf_Low_RGB_low.tif" %>% 
   raster::stack()
 # NAvalue(Belon_RGB) <- 0
 
-Gaf_Pred <- "Data/RGB/Gaf_Low_pred_RGB.tif" %>% 
+Gaf_Pred <- "Data/RGB/Gaf_Low_pred_RGB_low.tif" %>% 
   raster::stack()
 
 plot <- leaflet() %>%   
   # addTiles() %>% 
-  setView(lng = -8.743325,lat = 40.597520, zoom = 19) %>% 
+  setView(lng = -8.743325,lat = 40.597520, zoom = 100) %>% 
   addMapPane("right", zIndex = 0) %>%
   addMapPane("left", zIndex = 0) %>%
   addTiles(group = "base", layerId = "baseid", options = pathOptions(pane = "right"))  %>% 
@@ -59,6 +66,14 @@ plot <- leaflet() %>%
   leaflet.extras2::addSidebyside(leftId = "RGB",
                                   rightId = "DSM_pred")
 
-htmlwidgets::saveWidget(plot, file="maps/map_pred_Gaf_Low_DISCOV.html")
+htmlwidgets::saveWidget(plot, file="Website/maps/map_pred_Gaf_Low_DISCOV.html")
+
+```
+
+```{=html}
+<div style="width:100%; height:100%; position:relative">
+<iframe style="border:none; width:100%; height:100%; z-index:1" src="maps/map_pred_Gaf_Low_DISCOV.html"></iframe>
+<img style="bottom:0%; left:0px; height:50px; position:absolute; z-index:9" src="Imgs/Scale_pred.png">
+</div>
 
 ```
