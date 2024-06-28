@@ -19,9 +19,6 @@ The  **D**rone **I**ntertidal **S**ubstrats **C**lassification **O**f **V**egeta
 
 This repository complements a scientific paper published by Oiry et al. in The Journal of Photogrammetry and Remote Sensing (Under review).
 
-This paper has been produced during [Simon Oiry](https://oirysimon.com)'s PhD and the [BiCOME project](https://bicome.info). The project is one of the three studies that form part of the European Space Agency's 'Biodiversity+ Precursors' on [Terrestrial (EO4DIVERSITY)](https://www.eo4diversity.info/), [Freshwater (BIOMONDO)](https://www.biomondo.info/) and Coastal ecosystems (BiCOME).
-
-
 <img src="Imgs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
 
 <img src="Imgs/Figure2.png" width="40%" align="right"

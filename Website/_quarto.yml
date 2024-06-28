@@ -17,7 +17,7 @@ website:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About me
+        text: About the model
       - href: DISCOV_Examples.qmd
         text: DISCOV Example
 format:
