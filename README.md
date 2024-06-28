@@ -12,7 +12,7 @@ on [Terrestrial
 (EO4DIVERSITY)](https://www.eo4diversity.info/), [Freshwater
 (BIOMONDO)](https://www.biomondo.info/) and Coastal ecosystems (BiCOME).
 
-<img src="Data/figs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
+<img src="Website/Imgs/Micasense_Dual_MX.png" align="left" width="20%" title="Micasense RedEdge-MX Dual">
 
 This work demonstrates the development and application of a Neural
 Network classification model trained on a Micasense RedEdge-MX Dual
@@ -20,7 +20,7 @@ multispectral drone camera. This model is called **DISCOV**, which
 stands for **D**rone **I**ntertidal **S**ubstrats **C**lassification
 **O**f **V**egetation.
 
-<img src="Data/figs/Figure2.jpg" width="40%" align="right"
+<img src="Website/Imgs/Figure2.png" width="40%" align="right"
 title="Classes of the model">
 
 DISCOV is designed to classify soft bottom sediments, such as mudflats
