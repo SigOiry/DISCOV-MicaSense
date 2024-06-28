@@ -47,3 +47,14 @@ Polygons were created from the photointerpretation of the low-altitude flights, 
 Photos of each quadrat were uploaded to the Global Biodiversity Information Facility (GBIF) platform [(Davies et al., 2023)](https://www.gbif.org/dataset/7b14790c-8ddf-4709-9596-c938f9d5dc11), which is a public portal for storing and sharing biodiversity data. We processed each photograph with ImageJ [(Schneider et al., 2012)](https://doi.org/10.1038/nmeth.2089) to estimate the percent cover of each vegetation type. We also recorded hyperspectral reflectance signatures for each vegetation class using an ASD FieldSpec HandHeld 2 spectroradiometer. This device captures reflectance between 325 and 1075 nm with a spectral resolution of 1 nm. These hyperspectral signatures were crucial for validating the radiometric calibration of the drone data and reducing errors in photo interpretations.
 
 Using ~ 500.000 pixels, we built a neural network classification model using the fastai workflow [(Howard et al., 2018)](https://www.fast.ai). The model consists of two hidden layers and has a total of 26,054 trainable parameters. We fine-tuned the parameters over 12 epochs to minimize the error rate.
+
+### Validation 
+
+<img src="Imgs/ConfusionMatrixGlobal.png" width="60%" align="right"
+title="Classes of the model" style="margin: 10px;">
+
+In situ information on georeferenced class type and percent cover collected during each flight was used to assess the model's accuracy. These images were used to construct a validation dataset indicating the presence or absence of each class. 
+
+In addition to the quadrat-based validation dataset, polygons of each class were photo-interpreted to increase the number of pixels in the validation dataset. Altogether, a total of 536,000 pixels were used to validate the neural network classifier.
+
+We achieved a global accuracy of 94% across all the study sites.

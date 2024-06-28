@@ -126,6 +126,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#details" id="toc-details" class="nav-link" data-scroll-target="#details">Details</a>
   <ul class="collapse">
   <li><a href="#training" id="toc-training" class="nav-link" data-scroll-target="#training">Training</a></li>
+  <li><a href="#validation" id="toc-validation" class="nav-link" data-scroll-target="#validation">Validation</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -176,6 +177,13 @@ ul.task-list li input[type="checkbox"] {
 <p>Polygons were created from the photointerpretation of the low-altitude flights, and ground control points were used to extract reflectance data for five key taxonomic classes of intertidal vegetation: Bacillariophyceae (unicellular benthic diatoms forming biofilms at the sediment surface during low tide), Phaeophyceae (brown macroalgae), Magnoliopsida (dwarf eelgrass), Chlorophyceae (green macroalgae), and Rhodophyceae (red macroalgae).</p>
 <p>Photos of each quadrat were uploaded to the Global Biodiversity Information Facility (GBIF) platform <a href="https://www.gbif.org/dataset/7b14790c-8ddf-4709-9596-c938f9d5dc11">(Davies et al., 2023)</a>, which is a public portal for storing and sharing biodiversity data. We processed each photograph with ImageJ <a href="https://doi.org/10.1038/nmeth.2089">(Schneider et al., 2012)</a> to estimate the percent cover of each vegetation type. We also recorded hyperspectral reflectance signatures for each vegetation class using an ASD FieldSpec HandHeld 2 spectroradiometer. This device captures reflectance between 325 and 1075 nm with a spectral resolution of 1 nm. These hyperspectral signatures were crucial for validating the radiometric calibration of the drone data and reducing errors in photo interpretations.</p>
 <p>Using ~ 500.000 pixels, we built a neural network classification model using the fastai workflow <a href="https://www.fast.ai">(Howard et al., 2018)</a>. The model consists of two hidden layers and has a total of 26,054 trainable parameters. We fine-tuned the parameters over 12 epochs to minimize the error rate.</p>
+</section>
+<section id="validation" class="level3">
+<h3 data-anchor-id="validation">Validation</h3>
+<p><img src="Imgs/ConfusionMatrixGlobal.png" width="60%" align="right" title="Classes of the model" style="margin: 10px;"></p>
+<p>In situ information on georeferenced class type and percent cover collected during each flight was used to assess the model’s accuracy. These images were used to construct a validation dataset indicating the presence or absence of each class.</p>
+<p>In addition to the quadrat-based validation dataset, polygons of each class were photo-interpreted to increase the number of pixels in the validation dataset. Altogether, a total of 536,000 pixels were used to validate the neural network classifier.</p>
+<p>We achieved a global accuracy of 94% across all the study sites.</p>
 
 
 
