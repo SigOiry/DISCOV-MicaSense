@@ -1,5 +1,5 @@
 ---
-title: DISCOV
+title: "DISCOV: The Intertidal Drone Classification Model for Micasense"
 image: Imgs/DISCOV_logo.png
 about:
   image-shape: rounded
@@ -13,7 +13,7 @@ about:
 ---
 :::{#hero-heading}
 
-The  **D**rone **I**ntertidal **S**ubstrats **C**lassification **O**f **V**egetation (DISCOV) is a Neural Network classification model trained on a Micasense RedEdge-MX Dual multispectral drone camera.
+The  Drone Intertidal Substrats Classification Of Vegetation (**DISCOV**) is a Neural Network classification model trained on a **Micasense RedEdge-MX Dual** multispectral drone camera.
 :::
 
 
@@ -24,13 +24,13 @@ This repository complements a scientific paper published by Oiry et al. in The J
 <img src="Imgs/Figure2.png" width="40%" align="right"
 title="Classes of the model">
 
-DISCOV is designed to classify intertidal soft bottom sediments, such as mudflats and sandflats, as well as the vegetation typically found in these habitats. The primary objective of this model is to accurately **distinguish between seagrasses and green macroalgae**. This distinction presents a significant challenge in remote sensing for accurately classifying coastal habitats, owing to the similar pigment compositions of these two types of vegetation. In the image on the right, you can see the spectral signature for each vegetation class identified by the model. 
+DISCOV is designed to **classify** **intertidal** soft bottom sediments, such as mudflats and sandflats, as well as the **vegetation** typically found in these habitats. The primary objective of this model is to accurately distinguish between **seagrasses** and green macroalgae. This distinction presents a significant challenge in remote sensing for accurately classifying coastal habitats, owing to the similar pigment compositions of these two types of vegetation. In the image on the right, you can see the spectral signature for each vegetation class identified by the model. 
 
 ## Input and Output of the model
 
 ### Input
 
-DISCOV processes input from a multilayer TIFF file containing 10 spectral bands. Band 1 corresponds to the 444 nm band of the Micasense RedEdge-MX Dual, and Band 10 corresponds to the one at 840 nm. The model has been trained using pixels processed into reflectance by [Agisoft Metashape V2.1.1](https://www.agisoft.com). The training pixels were encoded in 16-bit integers, with values ranging from 0 to 10,000. 
+DISCOV processes input from a multilayer TIFF file containing 10 spectral bands. Band 1 corresponds to the 444 nm band of the **Micasense RedEdge-MX Dual**, and Band 10 corresponds to the one at 840 nm. The model has been trained using pixels processed into reflectance by [Agisoft Metashape V2.1.1](https://www.agisoft.com). The training pixels were encoded in 16-bit integers, with values ranging from 0 to 10,000. 
 
 ### Output
 

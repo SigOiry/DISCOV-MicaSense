@@ -22,6 +22,14 @@ website:
         text: DISCOV Example
 format:
   html:
+    include-in-header: 
+      text: |
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="description" content="DISCOV is an intertidal drone classification model developed for Micasense.">
+          <meta name="keywords" content="DISCOV, intertidal mapping, Drone, Classification model, Micasense, Seagrass">
+          <meta name="author" content="Simon Oiry">
+        </head>
     theme:      
       dark: darkly
       light: flatly
