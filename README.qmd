@@ -58,7 +58,7 @@ The current repositories of DISCOV include Python code, used to train the model 
 ### Windows 
 
 The first step is to install all the necessary software, if you haven't done so already. You will need to have R and Conda installed on your computer. 
-For [Conda](https://docs.conda.io/en/latest/), I recommend installing it directly through [Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file) using the Windows installer, which can be downloaded [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe).
+For [Conda](https://docs.conda.io/en/latest/), I recommend installing it directly through [Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file) using the Windows installer, which can be downloaded [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe). Don't forget to check the option "Add Miniforge3 to PATH environment variable" during the installation process. This will allow your command prompt (cmd) to find Conda.
 R can be downloaded from this [link](https://cran.r-project.org/mirrors.html). I recommend using [RStudio](https://posit.co/download/rstudio-desktop/), an integrated development environment specifically designed for R. 
 
 Alternatively to RStudio, you can use software like  [VS code](https://code.visualstudio.com) which allows you to edit and run code written in both R and Python within the same working environment. Once Conda is installed, open the terminal (Press windows + R and enter "cmd" to open the terminal). Typing `where conda` should give a reply. If at this step you have an error, check your conda installation. 

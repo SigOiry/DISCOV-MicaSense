@@ -116,7 +116,9 @@ installing it directly through
 [Conda-forge](https://github.com/conda-forge/miniforge?tab=readme-ov-file)
 using the Windows installer, which can be downloaded
 [here](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe).
-R can be downloaded from this
+Don’t forget to check the option “Add Miniforge3 to PATH environment
+variable” during the installation process. This will allow your command
+prompt (cmd) to find Conda. R can be downloaded from this
 [link](https://cran.r-project.org/mirrors.html). I recommend using
 [RStudio](https://posit.co/download/rstudio-desktop/), an integrated
 development environment specifically designed for R.
