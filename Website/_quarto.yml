@@ -25,10 +25,13 @@ format:
     include-in-header: 
       text: |
         <head>
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <meta name="description" content="DISCOV is an intertidal drone classification model developed for Micasense.">
-          <meta name="keywords" content="DISCOV, intertidal mapping, Drone, Classification model, Micasense, Seagrass">
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <meta name="description" content="DISCOV is an intertidal drone classification model developed for Micasense."/>
+          <meta name="keywords" content="DISCOV, intertidal mapping, Drone, Classification model, Micasense, Seagrass"/>
           <meta name="author" content="Simon Oiry">
+          <meta itemprop="name" content="DISCOV: The Intertidal Drone Classification Model for Micasense"/>
+          <meta itemprop="description" content="DISCOV is an intertidal drone classification model developed for Micasense."/>
+          <meta itemprop="keywords" content="DISCOV, intertidal mapping, Drone, Classification model, Micasense, Seagrass"/>
         </head>
     theme:      
       dark: darkly
@@ -43,4 +46,4 @@ format:
 
 editor: source
 
-
+=
