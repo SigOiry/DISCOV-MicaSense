@@ -16,3 +16,5 @@ Data/shp/*
 !Data/shp/mask/Gafanha_Low.prj
 !Data/shp/mask/Gafanha_Low.qmd
 !Data/shp/mask/Gafanha_Low.shx
+
+Output/**
