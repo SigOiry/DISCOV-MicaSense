@@ -34,8 +34,8 @@ format:
           <meta itemprop="keywords" content="DISCOV, intertidal mapping, Drone, Classification model, Micasense, Seagrass"/>
         </head>
     theme:      
-      dark: darkly
       light: flatly
+      dark: darkly
     css: styles.css
     toc: true
     grid:
