@@ -8,7 +8,7 @@ about:
   links:
     - icon: share
       text: Simon Oiry
-      href: https://simonoiry.com
+      href: https://oirysimon.com/about/
     - icon: share
       text: Bede Davies
       href: https://bedeffinianrowedavies.com
