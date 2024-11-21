@@ -46,7 +46,7 @@ dependencies:
   - cloudpathlib=0.16.0
   - colorama=0.4.6
   - colour=0.1.5
-  - comm=0.2.2=
+  - comm=0.2.2
   - confection=0.1.4
   - contourpy=1.2.1
   - cycler=0.12.1
