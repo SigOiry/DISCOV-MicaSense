@@ -10,12 +10,12 @@ Data/img/*
 !Data/img/Gafanha_Low_LowRes.tif
 
 Data/shp/*
-!Data/shp/mask/Gafanha_Low.shp
-!Data/shp/mask/Gafanha_Low.cpg
-!Data/shp/mask/Gafanha_Low.dbf
-!Data/shp/mask/Gafanha_Low.prj
-!Data/shp/mask/Gafanha_Low.qmd
-!Data/shp/mask/Gafanha_Low.shx
+!Data/shp/mask/Gafanha_Low_LowRes.shp
+!Data/shp/mask/Gafanha_Low_LowRes.cpg
+!Data/shp/mask/Gafanha_Low_LowRes.dbf
+!Data/shp/mask/Gafanha_Low_LowRes.prj
+!Data/shp/mask/Gafanha_Low_LowRes.qmd
+!Data/shp/mask/Gafanha_Low_LowRes.shx
 
 Data/Training/DISCOV_Invasea_V3.csv
 
