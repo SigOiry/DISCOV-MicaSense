@@ -32,6 +32,11 @@ affiliations:
   index: 1
 ---
 
+::: {.center}
+  display: block;
+  margin: 0 auto;
+:::
+
 # Summary
 
 Coastal intertidal seagrass meadows are critical ecosystems providing essential services such as carbon sequestration, erosion control, and habitats for diverse marine species [@sousa2019blue; @unsworth2022]. Despite their importance, these ecosystems face increasing threats from human activities, eutrophication, and habitat fragmentation, which diminish their ecological functions [@chefaoui2018dramatic; @nguyen2021; @wang2022]. Monitoring these habitats has been challenging due to their dynamic nature and the complexity of distinguishing vegetation types with similar pigment compositions [@Douay2022; @ralph2002]. This study addresses these challenges by developing a deep learning model capable of accurately classifying macrophytes, including seagrasses (Magnoliopsida) and green algae (Chlorophyceae), which share close pigment compositions [@Davies2023]. The model was trained on high-resolution drone-based reflectance data collected across diverse intertidal habitats in France and Portugal, encompassing monospecific and mixed vegetation meadows. It successfully discriminates between macrophyte types, leveraging subtle spectral differences, even in challenging cases where pigment similarity could hinder classification. This approach highlights the potential for advanced modeling techniques to improve vegetation mapping accuracy, offering insights into intertidal ecosystem dynamics and supporting more effective conservation strategies.
