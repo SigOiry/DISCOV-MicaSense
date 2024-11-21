@@ -1,5 +1,6 @@
 ---
 title: 'DISCOV: A Neural Network Classifier for Intertidal Vegetation Drone Mapping'
+css: styles_paper.css
 tags:
 - Python
 - R
@@ -31,11 +32,6 @@ affiliations:
     UR 2160, F-44000 Nantes, France"
   index: 1
 ---
-
-::: {.center}
-  display: block;
-  margin: 0 auto;
-:::
 
 # Summary
 
