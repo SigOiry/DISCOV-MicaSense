@@ -1,4 +1,4 @@
-<img src="Website/Imgs/DISCOV_logo.png" align="right" width="40%"
+<img src="Website/Imgs/DISCOV_logo_long.png" width="40%"
 title="Classes of the model">
 
 # What is DISCOV ?
