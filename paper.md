@@ -43,12 +43,10 @@ Accurately mapping and classifying intertidal vegetation, such as seagrasses and
 
 Traditional monitoring methods, such as field surveys and satellite remote sensing, face significant limitations. Field surveys are labor-intensive, restricted by tidal accessibility, and often lack spatial coverage. Satellite data, while providing broader coverage, typically struggles with inadequate spatial and spectral resolution, making it difficult to differentiate between vegetation types like seagrasses and green macroalgae, which share similar pigment compositions and spectral characteristics. This gap necessitates innovative solutions to deliver high-resolution and accurate classification.
 
-![](){.center width="20%"}
 
-```{=html}
 <img src="Website/Imgs/DISCOV_logo.png" width="20%" align="center"
 title="Classes of the model">
-```
+
 
 The **DISCOV (Drone Intertidal Substrate Classification Of Vegetation)** model offers a groundbreaking solution to these challenges. By leveraging drone-based high-resolution multispectral imagery and a neural network classifier, DISCOV enables the precise discrimination of vegetation types, even in mixed and heterogeneous habitats. This model delivers several capabilities:
 
