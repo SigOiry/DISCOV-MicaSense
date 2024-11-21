@@ -10,24 +10,28 @@ format: html
 - An orthoimage from the Micasense RedEdge Dual MX multispectral camera, coded as a 16-bit integer (values ranging from 0 to 10000)
 - A shapefile of the new training data, containing at least one column named "True_Class", which holds the name of the class of the polygon.
 
-```{r}
+```{r Script settings}
+### Path of the original training dataset
+old_data <- read.delim("Data/Training/DISCOV_BiCOME_Training.txt", sep=";")
 
-old_data <- read.delim("Data/Training/DISCOV_Invasea_V2.csv", sep=";")
+### Path of the new training dataset that will be created
+output_name <- "Data/Training/DISCOV_NewTrainingDataset.txt"
 
-output_name <- "Data/Training/DISCOV_Invasea_V3.csv"
+### Path of the image from which pixels will be extracted to create the new training dataset
+rast <- rast("Data/img/New_Micasense_Image.tif") 
+
+
+### Path of the image from which pixels will be extracted to create the new training dataset
+shp <- read_sf("Data/shp/Training_polygons.shp")
+
 
 table(old_data$True_Class)
 ```
 
-
-```{r}
+```{r Training dataset building}
 library(tidyverse)
 library(terra)
 library(sf)
-
-rast <- rast("Data/img/Belon_1004_MS.tif") 
-
-shp <- read_sf("Data/shp/Training_Belon_1004/Training_Belon_1004_V2.shp")
 
 Class <-data.frame(True_Class = unique(shp$True_Class),
                 ID= c(1:length( unique(shp$True_Class))))

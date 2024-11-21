@@ -17,4 +17,6 @@ Data/shp/*
 !Data/shp/mask/Gafanha_Low.qmd
 !Data/shp/mask/Gafanha_Low.shx
 
+Data/Training/DISCOV_Invasea_V3.csv
+
 Output/**
