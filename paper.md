@@ -7,7 +7,7 @@ tags:
 - Marine Ecology
 - Drone
 - Seagrass
-date: last-modified
+date: 2024-11-21
 output: word_document
 authors:
 - name: Simon Oiry
@@ -43,7 +43,12 @@ Accurately mapping and classifying intertidal vegetation, such as seagrasses and
 
 Traditional monitoring methods, such as field surveys and satellite remote sensing, face significant limitations. Field surveys are labor-intensive, restricted by tidal accessibility, and often lack spatial coverage. Satellite data, while providing broader coverage, typically struggles with inadequate spatial and spectral resolution, making it difficult to differentiate between vegetation types like seagrasses and green macroalgae, which share similar pigment compositions and spectral characteristics. This gap necessitates innovative solutions to deliver high-resolution and accurate classification.
 
-![](Website/Imgs/DISCOV_logo.png){width="20%" .center}
+![](){.center width="20%"}
+
+```{=html}
+<img src="Website/Imgs/DISCOV_logo.png" width="20%" align="center"
+title="Classes of the model">
+```
 
 The **DISCOV (Drone Intertidal Substrate Classification Of Vegetation)** model offers a groundbreaking solution to these challenges. By leveraging drone-based high-resolution multispectral imagery and a neural network classifier, DISCOV enables the precise discrimination of vegetation types, even in mixed and heterogeneous habitats. This model delivers several capabilities:
 
@@ -68,11 +73,21 @@ DISCOV development employed drone-based high-resolution multispectral imagery to
 
 Low-altitude flights were utilized to train the DISCOV model, a neural network classifier developed using the fastai workflow with two hidden layers and 26,054 trainable parameters. The model was trained on more than 418,000 pixels from the 8 mm resolution imagery, categorized into seven classes: seagrasses, green macroalgae, red macroalgae, brown macroalgae, benthic diatoms, sediment, and water. Training incorporated spectral bands, their standardized values, and the NDVI index.
 
-![Schematic representation of the workflow. Parallelograms represent input or output data, and rectangles represent Python processing algorithms. The overall workflow of this study is divided into two distinct parts based on the spatial resolution of the drone flights: high-resolution flights (pixel size: 8 mm) were used for training and prediction of the Neural Network model, whereas lower-resolution flights (pixel size: 80 mm) were solely employed for prediction purposes. Validation has been performed on both high and low-resolution flights.](Website/Imgs/Figure3.png){width="95%" .center}
+<figure style="text-align:right;">
+  <img src="Website/Imgs/Figure3.png" title="Workflow" width="95%" align="center"/>
+  <figcaption style="font-style: italic; text-align: center;">
+    Schematic representation of the workflow. Parallelograms represent input or output data, and rectangles represent Python processing algorithms. The overall workflow of this study is divided into two distinct parts based on the spatial resolution of the drone flights: high-resolution flights (pixel size: 8 mm) were used for training and prediction of the Neural Network model, whereas lower-resolution flights (pixel size: 80 mm) were solely employed for prediction purposes. Validation has been performed on both high and low-resolution flights.
+  </figcaption>
+</figure>
 
 Validation was performed using both low- and high-altitude flights, with 536,000 pixels collected from *in situ* field measurements and photo-interpretations. Metrics such as global accuracy, sensitivity, specificity, F1 score, and Kappa coefficient were calculated to evaluate model performance.
 
-![A global confusion matrix on the left is derived from validation data across each flight, while a mosaic of confusion matrices from individual flights is presented on the right. The labels inside the matrices indicate the balanced accuracy for each class. The labels at the bottom of the global matrix indicate the User’s accuracy for each class, and those on the right indicate the Producer’s Accuracy. The values adjacent to the names of each site represent the proportion of total pixels from that site contributing to the overall matrix. Grey lines within the mosaic indicate the absence of validation data for the class at that site. The table at the bottom summarizes the Sensitivity, Specificity, and Accuracy for each class and for the overall model.](Website/Imgs/ConfusionMatrixGlobal.png){width="95%" .center}
+<figure style="text-align:right;">
+  <img src="Website/Imgs/ConfusionMatrixGlobal.png" title="Workflow" width="95%" align="center"/>
+  <figcaption style="font-style: italic; text-align: center;">
+    A global confusion matrix on the left is derived from validation data across each flight, while a mosaic of confusion matrices from individual flights is presented on the right. The labels inside the matrices indicate the balanced accuracy for each class. The labels at the bottom of the global matrix indicate the User’s accuracy for each class, and those on the right indicate the Producer’s Accuracy. The values adjacent to the names of each site represent the proportion of total pixels from that site contributing to the overall matrix. Grey lines within the mosaic indicate the absence of validation data for the class at that site. The table at the bottom summarizes the Sensitivity, Specificity, and Accuracy for each class and for the overall model.
+  </figcaption>
+</figure>
 
 # How to install DISCOV ?
 
