@@ -294,6 +294,7 @@ dependencies:
       - pycparser==2.22
       - pydantic==2.7.0
       - pydantic-core==2.18.1
+      - python-graphviz==0.20.3
       - python-json-logger==2.0.7
       - pywinpty==2.0.13
       - pyyaml==6.0.1
@@ -317,9 +318,9 @@ dependencies:
       - thinc==8.2.3
       - tinycss2==1.2.1
       - tokenizers==0.19.1
-      - torch==2.2.2
-      - torchaudio==2.2.2
-      - torchvision==0.17.2
+      - torch==2.2.2+cu118
+      - torchaudio==2.2.2+cu118
+      - torchvision==0.17.2+cu118
       - tqdm==4.66.2
       - transformers==4.40.0
       - typer==0.9.4
@@ -333,3 +334,4 @@ dependencies:
       - widgetsnbextension==3.6.6
       - xxhash==3.4.1
       - yarl==1.9.4
+prefix: C:\Users\oirys\miniforge3\envs\NN_env
