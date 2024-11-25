@@ -35,7 +35,6 @@ trainging_shp <- c("Data/shp/Training/Saja/Saja_North_25062024.shp","Data/shp/Tr
 
 ```{r Training dataset building}
 
-
 for(i in 1:nrow(trainging_shp)){
   
   shp <- read_sf(trainging_shp$path[i])
