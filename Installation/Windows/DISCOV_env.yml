@@ -1,4 +1,4 @@
-name: DISCOV_env_ymltest
+name: DISCOV_env
 channels:
   - fastchan
   - conda-forge
