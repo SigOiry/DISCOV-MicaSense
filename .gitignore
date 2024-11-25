@@ -8,6 +8,7 @@ Output/Pred/**
 
 Data/img/*
 !Data/img/Gafanha_Low_LowRes.tif
+Data
 
  Data/shp/mask/*
  !Data/shp/mask/Gafanha_Low_LowRes.shp

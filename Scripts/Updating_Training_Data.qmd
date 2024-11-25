@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Updating of the training dataset of DISCOV"
 format: html
 ---
 
@@ -7,8 +7,10 @@ format: html
 
 ## Requierement
 
-- An orthoimage from the Micasense RedEdge Dual MX multispectral camera, coded as a 16-bit integer (values ranging from 0 to 10000)
+- An ortho-image from the Micasense RedEdge Dual MX multispectral camera, coded as a 16-bit integer (values ranging from 0 to 10000)
 - A shapefile of the new training data, containing at least one column named "True_Class", which holds the name of the class of the polygon.
+
+The output of this code can be use as input of Model_Training.ipynb
 
 ```{r Script settings}
 ### Path of the original training dataset

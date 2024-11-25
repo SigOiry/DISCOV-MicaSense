@@ -1,0 +1,170 @@
+---
+title: "Plot_DISCOV"
+format: html
+editor_options: 
+  chunk_output_type: console
+---
+
+This code is used to visualize the output of the Prediction.ipynb script
+
+The plot will be stored in Output/plot
+
+```{r library}
+library(tidyverse)
+library(terra)
+```
+
+```{r color tuning}
+
+Pred_colors <- c("#DAA520",
+                 "#b3ff1a",
+                 "#389318",
+                 "#873e23",
+                 "#b3002d",
+                 "grey",
+                 "white",
+                 "#42c9bc")
+
+Pred_class <- c(1:8)
+
+Pred_labels <- c("Bacillariophyceae",
+                 "Chlorophyceae",
+                 "Magnoliopsida",
+                 "Phaeophyceae",
+                 "Rhodophyceae",
+                 "Sediment",
+                 "SunGlint",
+                 "Water")
+```
+
+```{r File name}
+
+## The image to plot should be located in Output/Pred
+
+image_name <- "Gaf_Low_BiCOME"
+
+img_list<- list.files("Output/Pred", pattern = ".tif", recursive = T, full.names = T) %>% 
+  as_tibble() %>% 
+  rename(path = "value") %>% 
+  mutate(filename = gsub(".*/","",path),
+         img_name = gsub("_pred.tif","",filename),
+         img_name = gsub("_prob.tif","",img_name),
+         type = case_when(str_detect(filename, "pred.tif") ~ "Pred",
+                          str_detect(filename, "prob.tif") ~ "Prob")) %>% 
+  dplyr::filter(!str_detect(filename,"aux.xml"),
+                img_name %in% image_name)
+```
+
+```{r plot creation}
+
+for(i in 1:length(unique(img_list$img_name))){
+  
+  img_i <- img_list %>% 
+    dplyr::filter(img_name == unique(img_list$img_name)[i])
+  
+  pred <-  img_i %>% 
+    dplyr::filter(type =="Pred") %>% 
+    pull(path) %>% 
+    rast()
+  values(pred)[values(pred) == 0] = NA
+  values(pred)[values(pred) > 8] = NA
+  pred <- as.factor(pred)
+  NAflag(pred) <- 32767
+  names(pred) <- "layer"
+  
+  prob <-  img_i %>% 
+    dplyr::filter(type =="Prob") %>% 
+    pull(path) %>% 
+    rast()
+  names(prob) <- "layer"
+  
+  
+  pred_plot <- ggplot()+
+    tidyterra::geom_spatraster(data = pred, 
+                               mapping = aes(fill = layer),
+                               maxcell = 500832*8)+
+    coord_sf(crs = 4326)+
+    scale_fill_manual(breaks = Pred_class,
+                    values=Pred_colors,
+                    na.value = NA,
+                    name = "",
+                    labels = Pred_labels)+
+    ggtitle("Prediction")+
+    theme(plot.background = ggplot2::element_rect(fill = "transparent", colour = NA), 
+          legend.key = ggplot2::element_rect(fill = "white"), 
+          panel.border = ggplot2::element_rect(colour = "black", 
+                                               fill = NA, 
+                                               linewidth = 1),
+          legend.background = element_rect(fill = alpha("white",0.5)),
+          legend.position = c(0.40, 
+                              1),
+          legend.justification = c("right", "top"), 
+          legend.box.just = "right", 
+          legend.title = ggplot2::element_text(size = 14), 
+          legend.text = ggplot2::element_text(size = 12), 
+          panel.background = ggplot2::element_blank(),
+          panel.grid.major = ggplot2::element_line(linetype = "dotted", 
+                                                   colour = "grey30", 
+                                                   linewidth = 0.25), 
+          panel.ontop = TRUE, 
+          panel.grid.minor = ggplot2::element_blank(), 
+          axis.text.x = ggplot2::element_text(size = 14, 
+                                              colour = "black",
+                                              angle = 45,
+                                              hjust = 1), 
+          axis.text.y = ggplot2::element_text(colour = "black", 
+                                              size = 12), 
+          axis.title = ggplot2::element_text(colour = "black",
+                                             size = 12), 
+          strip.background = element_rect(fill = "white",
+                                          colour = "black", 
+                                          linewidth = rel(2)))
+  
+    prob_plot <- ggplot()+
+    tidyterra::geom_spatraster(data = prob, 
+                               mapping = aes(fill = layer),
+                               maxcell = 500832*8)+
+    coord_sf(crs = 4326,)+
+      scale_fill_viridis_c(na.value = NA,
+                           name = NULL)+
+    ggtitle("Probability")+
+    theme(plot.background = ggplot2::element_rect(fill = "transparent", colour = NA), 
+          legend.key = ggplot2::element_rect(fill = "white"), 
+          panel.border = ggplot2::element_rect(colour = "black", 
+                                               fill = NA, 
+                                               linewidth = 1),
+          legend.background = element_rect(fill = alpha("white",0.5)),
+          legend.position = c(0.15, 
+                              0.98),
+          legend.justification = c("right", "top"), 
+          legend.box.just = "right", 
+          legend.title = ggplot2::element_text(size = 14), 
+          legend.text = ggplot2::element_text(size = 12), 
+          panel.background = ggplot2::element_blank(),
+          panel.grid.major = ggplot2::element_line(linetype = "dotted", 
+                                                   colour = "grey30", 
+                                                   linewidth = 0.25), 
+          panel.ontop = TRUE, 
+          panel.grid.minor = ggplot2::element_blank(), 
+          axis.text.x = ggplot2::element_text(size = 14, 
+                                              colour = "black",
+                                              angle = 45,
+                                              hjust = 1), 
+          axis.text.y = ggplot2::element_blank(), 
+          axis.title = ggplot2::element_text(colour = "black",
+                                             size = 12), 
+          strip.background = element_rect(fill = "white",
+                                          colour = "black", 
+                                          linewidth = rel(2)))
+
+  plots <- pred_plot + prob_plot
+  
+    ggsave(paste0("Output/Plots/",unique(img_i$img_name),"_plot.png"),plots, height = 10, width = 10, dpi = 300)
+
+  
+}
+
+
+```
+
+

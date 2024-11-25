@@ -1,6 +1,0 @@
----
-title: "Filtering_prediction"
-author: "Simon"
-format: html
-editor: source
----
